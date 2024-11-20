@@ -1,0 +1,18 @@
+// Define the database connection
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL") // This will be configured in the .env file
+}
+
+// Define the Prisma client generator
+generator client {
+  provider    = "prisma-client-js"
+}
+
+// Define your models below
+model Application {
+  id        Int    @id @default(autoincrement()) // Primary key with auto-increment
+  name      String                             // Name of the applicant
+  email     String                             // Email of the applicant
+  position  String                             // Position applied for
+}

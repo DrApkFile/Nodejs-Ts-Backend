@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                    // Set the JavaScript language version for emitted JavaScript.
+    "module": "commonjs",               // Specify what module code is generated.
+    "outDir": "./dist",                 // Specify the output folder for all emitted files.
+    "strict": true,                     // Enable all strict type-checking options.
+    "esModuleInterop": true,            // Emit additional JavaScript to ease support for importing CommonJS modules.
+    "typeRoots": ["./src/types", "./node_modules/@types"], // Include custom types and default node types.
+    "types": ["node", "express", "jest"]        // Add the specified libraries for type checking.
+  },
+  "include": ["src/**/*", "tests/**/*", "types.d.ts"]
+}
